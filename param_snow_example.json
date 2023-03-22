@@ -1,0 +1,9 @@
+{
+    "user": "",
+    "url": "https://account.region.snowflakecomputing.com",
+    "private_key": "key in one line",
+    "port": 443,
+    "host": "account.region.snowflakecomputing.com",
+    "scheme": "https",
+    "role": "THE_ROLE_TO_EXECUTE"
+  }
