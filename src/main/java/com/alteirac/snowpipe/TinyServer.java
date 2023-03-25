@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
+import java.time.*;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -43,7 +44,8 @@ public class TinyServer {
             JSONObject json;
             try {
                 json = (JSONObject) parser.parse(buf.toString());
-                row.put("C1", json);
+                row.put("TS", LocalDate.now());
+                row.put("VALUE", json);
                 s.sendMessage(row);
                 String response =json+ " SENT !";
                 t.sendResponseHeaders(200, response.length());
