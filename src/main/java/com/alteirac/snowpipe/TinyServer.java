@@ -44,7 +44,7 @@ public class TinyServer {
             JSONObject json;
             try {
                 json = (JSONObject) parser.parse(buf.toString());
-                row.put("TS", LocalDate.now());
+                row.put("TS", Instant.now());
                 row.put("VALUE", json);
                 s.sendMessage(row);
                 String response =json+ " SENT !";
